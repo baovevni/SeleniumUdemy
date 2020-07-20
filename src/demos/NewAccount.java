@@ -10,9 +10,9 @@ import org.openqa.selenium.support.ui.Select;
 public class NewAccount {
     public static void main(String[] args) throws InterruptedException {
 
-        String fname = "Evgheni";
-        String lname = "Barducov";
-        String email = "afsd3dff@abc.com";
+        String fname = "John";
+        String lname = "Travolta";
+        String email = "awcf@abc.com";
         String password = "Qwerty123!";
         String birthDay = "21";
         String birthMonth = "12";
@@ -28,10 +28,10 @@ public class NewAccount {
         String phone = "132456789";
         String alias = "Alias1";
         String browserType = "chrome";
-        String gender = "Female";
-        String newsletter;
-        String offers;
-        String information;
+        String gender = "Male";
+        boolean newsletter = true;
+        boolean offers = false;
+        boolean information = false;
 
         // Define Web Driver
         WebDriver driver;
@@ -78,6 +78,18 @@ public class NewAccount {
             femaleRadio.click();
         }
 
+        // Checkbox algorythm
+        if (newsletter) {
+            if (!newsletterElement.isSelected()){
+                newsletterElement.click();
+            }
+        }
+        else {
+            if (newsletterElement.isSelected()){
+                newsletterElement.click();
+            }
+        }
+
         fnameElement.sendKeys(fname);
         lnameElement.sendKeys(lname);
         passwordElement.sendKeys(password);
@@ -87,7 +99,7 @@ public class NewAccount {
 //        Select years = new Select(driver.findElement(By.id("years")));
 //        years.selectByValue("1987");
         new Select(yearsElement).selectByValue(birthYear);
-        newsletterElement.click();
+//        newsletterElement.click();
         optionElement.click();
         companyElement.sendKeys(company);
         address1Element.sendKeys(address);
@@ -102,11 +114,19 @@ public class NewAccount {
         submittAccountElement.click();
 
         // 4. Get Confirmation
-//        String confirmation = driver.findElement(By.cssSelector(".page-heading")).getText();
-//        System.out.println("Confirmation " + confirmation);
-//        Thread.sleep(2000);
-//
-//        // 5. Close the browser
-//        driver.close();
+        String confirmation = driver.findElement(By.cssSelector(".page-heading")).getText();
+        String expected = "MY ACCOUNT";
+        if (confirmation.contains(expected)) {
+            System.out.println("Confirmation " + confirmation);
+        }
+        else {
+            System.out.println("Test FAILED");
+        }
+
+
+        Thread.sleep(2000);
+
+        // 5. Close the browser
+        driver.close();
     }
 }
