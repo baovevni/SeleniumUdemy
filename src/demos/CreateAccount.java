@@ -13,7 +13,7 @@ public class CreateAccount {
 
         // 2. Navigate to Create Account page, click on Create Account
         driver.get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-        driver.findElement(By.xpath("//*[@id=\"email_create\"]")).sendKeys("afs2@abc.com");
+        driver.findElement(By.xpath("//*[@id=\"email_create\"]")).sendKeys("affs2@abc.com");
         driver.findElement(By.cssSelector(".icon-user")).click();
         Thread.sleep(1500);
 

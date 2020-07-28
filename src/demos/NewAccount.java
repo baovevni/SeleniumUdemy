@@ -12,7 +12,7 @@ public class NewAccount {
 
         String fname = "John";
         String lname = "Travolta";
-        String email = "awcf@abc.com";
+        String email = "awcdf@abc.com";
         String password = "Qwerty123!";
         String birthDay = "21";
         String birthMonth = "12";
