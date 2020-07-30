@@ -22,6 +22,7 @@ public class DataReaders {
         String filename = "C:\\seleniumDrivers\\SelenimUdemy\\UserLogin.xls";
         String[][] data = utilities.Excel.get(filename);
         for (String[] record : data) {
+            System.out.println("\nNEW ACCOUNT: ");
             System.out.println(record[0]);
             System.out.println(record[1]);
         }
