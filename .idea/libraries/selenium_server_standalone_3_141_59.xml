@@ -2,6 +2,13 @@
   <library name="selenium-server-standalone-3.141.59">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../selenium-server-standalone-3.141.59.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../cucumber-core-6.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../cucumber-java-6.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../cucumber-junit-6.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../gherkin-15.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../cucumber-picocontainer-6.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../cucumber-gherkin-6.8.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../gherkin-jvm-deps-1.0.4.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

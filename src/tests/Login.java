@@ -21,9 +21,9 @@ public class Login {
         loginPage.clickSubmit();
 
         // 3. Get Confirmation (Dashboard)
-        DashboardPage dashboardage = new DashboardPage(driver);
-        String confirmation = dashboardage.confirmationMessage();
-        String title = dashboardage.title();
+        DashboardPage dashboardPage = new DashboardPage(driver);
+        String confirmation = dashboardPage.confirmationMessage();
+        String title = dashboardPage.title();
 
         // 4. Assertions
         Assert.assertTrue(confirmation.contains("ACCOUNT"));
